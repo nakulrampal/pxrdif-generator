@@ -67,3 +67,7 @@ PXRDIF files with:
 - Experimental conditions
 - Synthesis parameters
 - PXRD diffraction data
+
+---
+
+*Developed with assistance from GitHub Copilot (Claude Sonnet 4.5)*
