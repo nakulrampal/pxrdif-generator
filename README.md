@@ -1,20 +1,20 @@
 # PXRDIF Generator
 
-Convert Excel CSV files containing experimental conditions and PXRD data into PXRDIF format files.
+Converts CSV files to PXRDIF format.
 
 ## Features
 
-- Parses experimental conditions from CSV files (precursors, solvents, catalysts, temperature, duration)
-- Converts PXRD data (theta, intensity) to PXRDIF format
+- Parses experimental conditions (precursors, solvents, catalysts, temperature, duration)
+- Converts PXRD data (theta, intensity)
 - Handles inline and column-based CSV formats
 - Supports "no catalyst" experiments
-- Handles multiple dash types (-, –, —)
-- Batch processing for multiple datasets
+- Handles dash types: -, –, —
+- Batch processing
 
 ## Files
 
-- `excel_to_pxrdif_converter.py` - Main converter with parsing logic
-- `batch_convert_pxrdif.py` - Batch processing script for multiple datasets
+- `excel_to_pxrdif_converter.py` - Main converter
+- `batch_convert_pxrdif.py` - Batch processor
 
 ## Requirements
 
@@ -47,30 +47,23 @@ python batch_convert_pxrdif.py
 ## CSV Format
 
 ### Conditions CSV
-Can be inline format (entire row as quoted string) or column-based with headers:
 - Experiment ID
 - Precursor 1 amount
 - Precursor 2 amount
 - Solvent 1 (name and volume)
 - Solvent 2 (name and volume)
 - Solvent 3 (optional)
-- Catalyst (name and volume/mass) or "-" for no catalyst
+- Catalyst (name and volume/mass) or "-"
 - Total volume
 - Rationale
 
 ### PXRD CSV
-- First column: theta values
-- Subsequent columns: intensity values for each experiment (labeled by experiment ID)
+- Column 1: theta values
+- Other columns: intensity (labeled by experiment ID)
 
-## Output Format
+## Output
 
-PXRDIF files following crystallographic information file standards with:
-- Experimental conditions (precursors, solvents, catalysts)
-- Synthesis parameters (temperature, duration)
-- PXRD diffraction data (theta, intensity)
-
-## Special Handling
-
-- "no catalyst" experiments: No catalyst fields in output
-- Multiple dash types: Regular dash (-), en-dash (–), em-dash (—) all treated as empty
-- Force catalyst mass: Converts volume to mass for specific catalyst types
+PXRDIF files with:
+- Experimental conditions
+- Synthesis parameters
+- PXRD diffraction data
