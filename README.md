@@ -1,3 +1,5 @@
+<img src="logo.png" alt="PXRDIF" width="400">
+
 # PXRDIF Generator
 
 Converts CSV files to PXRDIF format.
