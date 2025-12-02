@@ -1,4 +1,6 @@
-<img src="logo.png" alt="PXRDIF" width="400">
+<p align="center">
+  <img src="logo.png" alt="PXRDIF" width="200">
+</p>
 
 # PXRDIF Generator
 
